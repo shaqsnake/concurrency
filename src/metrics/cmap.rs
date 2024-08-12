@@ -8,17 +8,17 @@ use std::{
 };
 
 #[derive(Debug, Clone)]
-pub struct Metrics {
+pub struct CmapMetrics {
     data: Arc<Mutex<HashMap<String, i64>>>,
 }
 
-impl Default for Metrics {
+impl Default for CmapMetrics {
     fn default() -> Self {
         Self::new()
     }
 }
 
-impl Metrics {
+impl CmapMetrics {
     pub fn new() -> Self {
         Self {
             data: Arc::new(Mutex::new(HashMap::new())),
